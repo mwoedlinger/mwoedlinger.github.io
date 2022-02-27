@@ -2645,10 +2645,10 @@ input, select, textarea {
 				overflow-y: auto;
 				position: fixed;
 				top: 0;
-				width: 275px;
+				width: 125px;
 				z-index: 10002;
 				color: #858484;
-				/* background-image: url("images/bg02.png"); */
+				background-image: url("images/bg.png");
 				box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
 			}
 
@@ -2693,7 +2693,8 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #fff;
+					color: rgb(0, 0, 0);
+					font-weight: bold;
 				}
 
 			body.navPanel-visible #page-wrapper {
