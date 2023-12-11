@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.summary {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.links a i {
+    font-size: 1.5em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* ... rest of your CSS ... */
+
+.icon {
+    height: 1.5em;
+    width: auto;
+    vertical-align: text-bottom; /* or try 'bottom' if 'text-bottom' does not align it properly */
+}
+
+
+/* ... rest of your CSS ... */
