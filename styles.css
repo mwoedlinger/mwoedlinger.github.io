@@ -1,5 +1,5 @@
 body {
-    font-family: Consolas,"courier new";
+    font-family: Consolas, "courier new";
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -14,6 +14,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    width: 100%;
 }
 
 .summary {
