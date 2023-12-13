@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="darkModeToggle" title="Toggle Dark Mode">
+        <i class="fas fa-moon" id="moonIcon"></i>
+        <i class="fas fa-sun" id="sunIcon" style="display: none;"></i>
+    </button>
+
     <div class="container">
         <h1>Matthias Wödlinger</h1>
         <!-- <p class="summary">PhD student in computer vision at TU Vienna</p> -->
@@ -24,5 +29,29 @@
             <a href="mailto:mwoedlinger@cvl.tuwien.ac.at"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('darkModeToggle');
+            const moonIcon = document.getElementById('moonIcon');
+            const sunIcon = document.getElementById('sunIcon');
+    
+            btn.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                document.querySelector('.container').classList.toggle('dark-mode');
+                document.querySelectorAll('.links a').forEach(el => el.classList.toggle('dark-mode'));
+                
+                // Toggle icons visibility
+                if (document.body.classList.contains('dark-mode')) {
+                    moonIcon.style.display = 'none';
+                    sunIcon.style.display = 'inline';
+                } else {
+                    moonIcon.style.display = 'inline';
+                    sunIcon.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>
