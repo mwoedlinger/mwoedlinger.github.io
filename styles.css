@@ -1,5 +1,6 @@
 body {
     font-family: Consolas, "courier new";
+    /* background-color: #ffffff; */
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -19,7 +20,9 @@ body {
 
 .summary {
     margin-top: 10px;
-    margin-bottom: 20px;
+    max-width: 570px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .links a {
