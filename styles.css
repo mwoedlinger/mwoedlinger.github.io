@@ -36,6 +36,10 @@ body {
     color: #0073e6;
 }
 
+.links a i:hover {
+    color: #0096ff;
+}
+
 .icon {
     height: 2.0em;
     width: auto;
@@ -72,6 +76,10 @@ body.dark-mode {
     color: #92bbe4;
 }
 
+.links a.dark-mode i:hover {
+    color: #a9c6e4;
+}
+
 /* Style for Dark Mode Toggle Button */
 #darkModeToggle {
     position: fixed; /* Fixed position */
@@ -80,12 +88,12 @@ body.dark-mode {
     background: transparent; /* Transparent background */
     border: none; /* No border */
     cursor: pointer; /* Cursor pointer on hover */
-    color: #0073e6; /* Initial color, change as needed */
+    color: #7c7c7c; /* Initial color, change as needed */
     font-size: 1.5em; /* Adjust font size for the icons */
 }
 
 #darkModeToggle:hover {
-    color: #0096ff; /* Slightly lighter on hover */
+    color: #adadad; /* Slightly lighter on hover */
 }
 
 .summary a {
