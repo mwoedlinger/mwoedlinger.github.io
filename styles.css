@@ -33,6 +33,7 @@ body {
 
 .links a i {
     font-size: 2.0em;
+    color: #0073e6;
 }
 
 .icon {
@@ -65,6 +66,10 @@ body.dark-mode {
 
 .links a.dark-mode {
     color: #4eb5f1;
+}
+
+.links a.dark-mode i {
+    color: #92bbe4;
 }
 
 /* Style for Dark Mode Toggle Button */
