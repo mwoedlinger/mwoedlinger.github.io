@@ -34,10 +34,12 @@ body {
 .links a i {
     font-size: 2.0em;
     color: #0073e6;
+    transition: color 0.3s, transform 0.3s; /* Add transition for smooth effect */
 }
 
 .links a i:hover {
     color: #0096ff;
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
 
 .icon {
@@ -76,8 +78,10 @@ body.dark-mode {
     color: #92bbe4;
 }
 
+/* For dark mode */
 .links a.dark-mode i:hover {
     color: #a9c6e4;
+    transform: scale(1.1); /* Slightly enlarge the icon on hover in dark mode */
 }
 
 /* Style for Dark Mode Toggle Button */
