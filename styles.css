@@ -1,74 +1,105 @@
 body {
     font-family: Consolas, "courier new";
-    /* background-color: #ffffff; */
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    line-height: 1.6;
+    min-height: 100vh;
 }
 
 .container {
     background-color: #ffffff;
-    padding: 20px;
-    /* border-radius: 10px; */
-    text-align: center;
+    max-width: 800px;
     width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .summary {
-    margin-top: 10px;
-    max-width: 750px;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    font-size: 1.1em;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Link Styles */
+.links {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .links a {
     margin: 0 10px;
     text-decoration: none;
     color: #0073e6;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .links a i {
-    font-size: 2.0em;
-    color: #0073e6;
-    transition: color 0.3s, transform 0.3s; /* Add transition for smooth effect */
+    font-size: 2em;
 }
 
-.links a i:hover {
+.links a:hover {
     color: #0096ff;
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    transform: translateY(-2px);
 }
 
-.icon {
-    height: 2.0em;
-    width: auto;
-    vertical-align: text-bottom;
+/* Overview Section Styles */
+.overview {
+    max-width: 800px;
+    width: 100%;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-/* Modified Responsive Design */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
+.overview > div {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
 
-    /* Adjusting icon spacing for mobile */
-    .links a {
-        margin: 0 5px; /* Reduced margin for smaller screens */
-    }
+.overview h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.overview table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+.overview table td {
+    padding: 6px 4px;
+    text-align: left;
+    border: none;
 }
 
 /* Dark Mode Styles */
 body.dark-mode {
-    background-color: #272822; /* Monokai background color */
-    color: #f8f8f2; /* Monokai text color */
+    background-color: #272822;
+    color: #f8f8f2;
+    padding: 20px;
 }
 
 .container.dark-mode {
-    background-color: #3e3d32; /* Slightly lighter background for contrast */
+    background-color: #3e3d32;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .links a.dark-mode {
@@ -79,41 +110,60 @@ body.dark-mode {
     color: #92bbe4;
 }
 
-/* For dark mode */
-.links a.dark-mode i:hover {
+.links a.dark-mode:hover {
     color: #a9c6e4;
-    transform: scale(1.1); /* Slightly enlarge the icon on hover in dark mode */
+    transform: translateY(-2px);
 }
 
-/* Style for Dark Mode Toggle Button */
 #darkModeToggle {
-    position: fixed; /* Fixed position */
-    top: 20px; /* Distance from top */
-    right: 20px; /* Distance from right */
-    background: transparent; /* Transparent background */
-    border: none; /* No border */
-    cursor: pointer; /* Cursor pointer on hover */
-    color: #7c7c7c; /* Initial color, change as needed */
-    font-size: 1.5em; /* Adjust font size for the icons */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #7c7c7c;
+    font-size: 1.5em;
 }
 
 #darkModeToggle:hover {
-    color: #adadad; /* Slightly lighter on hover */
+    color: #adadad;
 }
 
 .summary a {
-    color: #0073e6; /* Normal link color, adjust as needed */
+    color: #0073e6;
 }
 
 .summary a:visited {
-    color: #551a8b; /* Visited link color, adjust as needed */
+    color: #551a8b;
 }
 
-/* Dark Mode Link Colors in Summary */
 .dark-mode .summary a {
-    color: #4eb5f1; /* Lighter blue for better visibility in dark mode */
+    color: #4eb5f1;
 }
 
 .dark-mode .summary a:visited {
-    color: #c792ea; /* Lighter purple for better visibility in dark mode */
+    color: #c792ea;
+}
+
+/* Fix education and skills sections font color in dark mode */
+body.dark-mode .overview > div {
+    color: #ccc;
+}
+
+body.dark-mode .overview h2 {
+    color: #f8f8f2;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .overview > div {
+        margin: 5px;
+    }
+    .links a {
+        margin: 0 5px;
+    }
 }

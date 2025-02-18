@@ -16,12 +16,11 @@
 
     <div class="container">
         <h1>Matthias Wödlinger</h1>
-        <!-- <p class="summary">PhD student in computer vision at TU Vienna</p> -->
         <p class="summary">
-            I recently defended my PhD in Computer Vision at TU Wien, where my research focused on the neural attention mechanism. During my PhD, I worked across various domains, including learned image compression and applications in cancer research.
-            Currently, I am developing methods to detect cancer cells in bone marrow samples at the <a href="https://ccri.at/">CCRI</a>.
+            Recent PhD graduate in Computer Vision from TU Wien with expertise in applied Deep Learning. I developed state-of-the-art deep learning models for various applications while blending my background in machine learning, physics, and mathematics. Currently at <a href="https://ccri.at/">CCRI</a>, I am developing Transformer models for the detection of cancer cells in bone marrow samples. 
             <br><br>
-            <span style="font-weight:bold">I am actively seeking PostDoc opportunities in Machine Learning, either in academia or industry. Please feel free to reach out to me via <a href="mailto:mwoedlinger@cvl.tuwien.ac.at">email</a> or <a href="https://at.linkedin.com/in/matthias-woedlinger">LinkedIn</a>.</span>
+            <span style="font-weight:bold">I am actively looking for opportunities in the machine learning field. Feel free to connect via <a href="mailto:mwoedlinger@cvl.tuwien.ac.at">email</a> or <a href="https://at.linkedin.com/in/matthias-woedlinger">LinkedIn</a>.</span>
+        </p>
         <div class="links">
             <a href="https://github.com/mwoedlinger" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://scholar.google.com/citations?user=8dc8ibAAAAAJ&hl" target="_blank"><i class="fas fa-graduation-cap"></i></a>
@@ -30,17 +29,71 @@
         </div>
     </div>
 
+    <div class="overview">
+        <div class="edu">
+            <h2>Education</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>PhD (Dr. techn.) in Computer Vision</td>
+                        <td>TU Vienna</td>
+                        <td>Nov 2024</td>
+                    </tr>
+                    <tr>
+                        <td>MSc (Dipl.-Ing.) in Technical Mathematics</td>
+                        <td>TU Vienna</td>
+                        <td>Nov 2018</td>
+                    </tr>
+                    <tr>
+                        <td>MSc (Dipl.-Ing.) in Technical Physics</td>
+                        <td>TU Vienna</td>
+                        <td>Apr 2018</td>
+                    </tr>
+                    <tr>
+                        <td>BSc in Technical Physics</td>
+                        <td>TU Vienna</td>
+                        <td>Nov 2017</td>
+                    </tr>
+                    <tr>
+                        <td>BSc in Technical Mathematics</td>
+                        <td>TU Vienna</td>
+                        <td>Dec 2015</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Coding</td>
+                        <td>Python (Pytorch, Tensorflow, Numpy, OpenCV, scikit-learn, Pandas, Matplotlib), C, C++, Matlab, Mathematica, LaTeX</td>
+                    </tr>
+                    <tr>
+                        <td>Tools</td>
+                        <td>Git/GitHub, Unix Shell, SSH, Linux, Microsoft Office</td>
+                    </tr>
+                    <tr>
+                        <td>Languages</td>
+                        <td>German (native), English (fluent)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('darkModeToggle');
             const moonIcon = document.getElementById('moonIcon');
             const sunIcon = document.getElementById('sunIcon');
-    
+
             btn.addEventListener('click', function() {
                 document.body.classList.toggle('dark-mode');
                 document.querySelector('.container').classList.toggle('dark-mode');
                 document.querySelectorAll('.links a').forEach(el => el.classList.toggle('dark-mode'));
-                
+
                 // Toggle icons visibility
                 if (document.body.classList.contains('dark-mode')) {
                     moonIcon.style.display = 'none';
