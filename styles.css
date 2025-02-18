@@ -1,7 +1,4 @@
-/* Hide vertical scrollbar if not needed */
-html {
-    overflow-y: hidden;
-}
+/* Removed overflow-y: hidden; to allow scrollbars when needed */
 
 body {
     font-family: Consolas, "courier new";
