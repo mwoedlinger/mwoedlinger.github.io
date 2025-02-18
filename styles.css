@@ -1,3 +1,8 @@
+/* Hide vertical scrollbar if not needed */
+html {
+    overflow-y: hidden;
+}
+
 body {
     font-family: Consolas, "courier new";
     background-color: #f4f4f4;
@@ -6,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;  /* vertically centers the entire content */
     min-height: 100vh;
 }
 
@@ -30,26 +36,49 @@ h1 {
     line-height: 1.6;
 }
 
-/* Link Styles */
+/* Global Link Styles */
+a {
+    text-decoration: none;
+    color: #444;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+a:visited {
+    color: #555;
+}
+a:hover {
+    font-weight: bold;
+    color: #222;
+}
+body.dark-mode a {
+    color: #ccc;
+}
+body.dark-mode a:visited {
+    color: #bbb;
+}
+body.dark-mode a:hover {
+    color: #fff;
+}
+
+/* Link Styles for the social icons */
 .links {
     text-align: center;
     margin-top: 20px;
 }
-
 .links a {
     margin: 0 10px;
-    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+.links a:hover {
+    transform: translateY(-2px);
+}
+/* Restore icon colors */
+.links a i {
+    font-size: 2em;
     color: #0073e6;
     transition: color 0.3s, transform 0.3s;
 }
-
-.links a i {
-    font-size: 2em;
-}
-
-.links a:hover {
-    color: #0096ff;
-    transform: translateY(-2px);
+body.dark-mode .links a i {
+    color: #92bbe4;
 }
 
 /* Overview Section Styles */
@@ -102,19 +131,6 @@ body.dark-mode {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.links a.dark-mode {
-    color: #4eb5f1;
-}
-
-.links a.dark-mode i {
-    color: #92bbe4;
-}
-
-.links a.dark-mode:hover {
-    color: #a9c6e4;
-    transform: translateY(-2px);
-}
-
 #darkModeToggle {
     position: fixed;
     top: 20px;
@@ -130,27 +146,10 @@ body.dark-mode {
     color: #adadad;
 }
 
-.summary a {
-    color: #0073e6;
-}
-
-.summary a:visited {
-    color: #551a8b;
-}
-
-.dark-mode .summary a {
-    color: #4eb5f1;
-}
-
-.dark-mode .summary a:visited {
-    color: #c792ea;
-}
-
 /* Fix education and skills sections font color in dark mode */
 body.dark-mode .overview > div {
     color: #ccc;
 }
-
 body.dark-mode .overview h2 {
     color: #f8f8f2;
 }
