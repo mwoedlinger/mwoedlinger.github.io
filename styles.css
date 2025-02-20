@@ -58,8 +58,10 @@ body.dark-mode a:hover {
 
 /* Link Styles for the social icons */
 .links {
-    text-align: center;
-    margin-top: 20px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .links a {
     margin: 0 10px;
@@ -162,4 +164,12 @@ body.dark-mode .overview h2 {
     .links a {
         margin: 0 5px;
     }
+}
+
+/* Audio Element Styles */
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
 }
