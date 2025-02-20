@@ -208,6 +208,9 @@ body.dark-mode .overview h2 {
     text-align: center;
     z-index: 10;
 }
+body.dark-mode .links {
+    background: linear-gradient(to bottom, #272822 80%, rgba(39,40,34,0) 100%);
+}
 #darkModeToggle {
     top: 10px;
     right: 10px;
