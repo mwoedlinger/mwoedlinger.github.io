@@ -205,6 +205,14 @@ h1 {
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    margin-bottom: var(--space-xs);
+}
+
+.podcast-note {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
     margin-bottom: var(--space-md);
 }
 
