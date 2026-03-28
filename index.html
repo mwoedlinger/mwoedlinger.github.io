@@ -5,88 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthias Wödlinger</title>
     <link rel="icon" href="assets/eye.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="darkModeToggle" title="Toggle Dark Mode">
-        <i class="fas fa-moon" id="moonIcon"></i>
-        <i class="fas fa-sun" id="sunIcon" style="display: none;"></i>
-    </button>
-    
-    <div class="links">
-        <a href="https://github.com/mwoedlinger" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://scholar.google.com/citations?user=8dc8ibAAAAAJ&hl" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-        <a href="https://at.linkedin.com/in/matthias-woedlinger" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:mwoedlinger@cvl.tuwien.ac.at"><i class="fas fa-envelope"></i></a>
-    </div>
+    <header>
+        <nav aria-label="Social links">
+            <a href="https://github.com/mwoedlinger" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?user=8dc8ibAAAAAJ&hl" target="_blank" rel="noopener" aria-label="Google Scholar profile"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://at.linkedin.com/in/matthias-woedlinger" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:mwoedlinger@cvl.tuwien.ac.at" aria-label="Send email"><i class="fas fa-envelope"></i></a>
+        </nav>
+        <button id="darkModeToggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" id="moonIcon"></i>
+            <i class="fas fa-sun" id="sunIcon" style="display: none;"></i>
+        </button>
+    </header>
 
-    <div class="container">
-        <h1>Matthias Wödlinger</h1>
-        <p class="summary">
-            Recent PhD graduate in <a href="https://cvl.tuwien.ac.at">Computer Vision at TU Wien</a> with expertise in applied Deep Learning. I developed state-of-the-art deep learning models for various applications while blending my background in machine learning, physics, and mathematics. Currently I am working as an applied scientist at Amazon. 
-            <br><br>
-            <span style="font-weight:bold">Listen to my CV in podcast form:</span>
-        </p>
-        <audio controls>
-            <source src="assets/podcast.wav" type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+    <main>
+        <section class="hero">
+            <h1>Matthias Wödlinger</h1>
+            <p class="summary">
+                Recent PhD graduate in <a href="https://cvl.tuwien.ac.at">Computer Vision at TU Wien</a> with expertise in applied Deep Learning. I developed state-of-the-art deep learning models for various applications while blending my background in machine learning, physics, and mathematics. Currently I am working as an applied scientist at Amazon.
+            </p>
+            <div class="podcast">
+                <span class="podcast-label">Listen to my CV in podcast form</span>
+                <audio controls>
+                    <source src="assets/podcast.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </section>
 
-    <div class="overview">
-        <div class="edu">
-            <h2>Education</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <td><a href="https://repositum.tuwien.at/handle/20.500.12708/209197">PhD (Dr. techn.) in Computer Vision</a></td>
-                        <td>TU Vienna</td>
-                        <td>Nov 2024</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://repositum.tuwien.at/handle/20.500.12708/7925">MSc (Dipl.-Ing.) in Technical Mathematics</a></td>
-                        <td>TU Vienna</td>
-                        <td>Nov 2018</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://repositum.tuwien.at/handle/20.500.12708/3375">MSc (Dipl.-Ing.) in Technical Physics</a></td>
-                        <td>TU Vienna</td>
-                        <td>Apr 2018</td>
-                    </tr>
-                    <tr>
-                        <td>BSc in Technical Physics</td>
-                        <td>TU Vienna</td>
-                        <td>Nov 2017</td>
-                    </tr>
-                    <tr>
-                        <td>BSc in Technical Mathematics</td>
-                        <td>TU Vienna</td>
-                        <td>Dec 2015</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="skills">
-            <h2>Skills</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Coding</td>
-                        <td>Python (Pytorch, Tensorflow, Numpy, OpenCV, scikit-learn, Pandas, Matplotlib), C, C++, Matlab, Mathematica, LaTeX</td>
-                    </tr>
-                    <tr>
-                        <td>Tools</td>
-                        <td>Git/GitHub, Unix Shell, SSH, Linux, Microsoft Office</td>
-                    </tr>
-                    <tr>
-                        <td>Languages</td>
-                        <td>German (native), English (fluent)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+        <section class="overview">
+            <div class="edu">
+                <h2>Education</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://repositum.tuwien.at/handle/20.500.12708/209197">PhD (Dr. techn.) in Computer Vision</a></td>
+                            <td>TU Vienna</td>
+                            <td>Nov 2024</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://repositum.tuwien.at/handle/20.500.12708/7925">MSc (Dipl.-Ing.) in Technical Mathematics</a></td>
+                            <td>TU Vienna</td>
+                            <td>Nov 2018</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://repositum.tuwien.at/handle/20.500.12708/3375">MSc (Dipl.-Ing.) in Technical Physics</a></td>
+                            <td>TU Vienna</td>
+                            <td>Apr 2018</td>
+                        </tr>
+                        <tr>
+                            <td>BSc in Technical Physics</td>
+                            <td>TU Vienna</td>
+                            <td>Nov 2017</td>
+                        </tr>
+                        <tr>
+                            <td>BSc in Technical Mathematics</td>
+                            <td>TU Vienna</td>
+                            <td>Dec 2015</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Coding</td>
+                            <td>Python (Pytorch, Tensorflow, Numpy, OpenCV, scikit-learn, Pandas, Matplotlib), C, C++, Matlab, Mathematica, LaTeX</td>
+                        </tr>
+                        <tr>
+                            <td>Tools</td>
+                            <td>Git/GitHub, Unix Shell, SSH, Linux, Microsoft Office</td>
+                        </tr>
+                        <tr>
+                            <td>Languages</td>
+                            <td>German (native), English (fluent)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -94,22 +101,23 @@
             const moonIcon = document.getElementById('moonIcon');
             const sunIcon = document.getElementById('sunIcon');
 
+            // Check for saved preference or system preference
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const saved = localStorage.getItem('darkMode');
+            if (saved === 'true' || (saved === null && prefersDark)) {
+                document.body.classList.add('dark-mode');
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            }
+
             btn.addEventListener('click', function() {
                 document.body.classList.toggle('dark-mode');
-                document.querySelector('.container').classList.toggle('dark-mode');
-                document.querySelectorAll('.links a').forEach(el => el.classList.toggle('dark-mode'));
-
-                // Toggle icons visibility
-                if (document.body.classList.contains('dark-mode')) {
-                    moonIcon.style.display = 'none';
-                    sunIcon.style.display = 'inline';
-                } else {
-                    moonIcon.style.display = 'inline';
-                    sunIcon.style.display = 'none';
-                }
+                const isDark = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkMode', isDark);
+                moonIcon.style.display = isDark ? 'none' : 'inline';
+                sunIcon.style.display = isDark ? 'inline' : 'none';
             });
         });
     </script>
-    
 </body>
 </html>
